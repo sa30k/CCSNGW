@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CCSNGW</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <ul>
+          <div>
+            <li class="sidebar-li"><a href="#data-analysis"><b>Data Analysis</b></a></li>
+            <ul>
+              <div><li class="sidebar-li"><a href="#coherent-waveburst">coherent WaveBurst</a></li></div>
+              <div><li class="sidebar-li"><a href="#deep-learning">Deep Learning</a></li></div>
+              <div><li class="sidebar-li"><a href="#principal-component-analysis">Principal Component Analysis</a></li></div>
+              <div><li class="sidebar-li"><a href="#other-methods">Other Methods</a></li></div>
+            </ul>
+          </div>
+          <div>
+            <li class="sidebar-li"><a href="#numerical-simulation"><b>Numerical Simulation</b></a></li>
+            <ul>
+              <div><li class="sidebar-li"></li></div>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="header">
+          <div>
+            <div class="header-text">CCSNGW</div>
+          </div>
+        </div>
+        <div class="papers">
+          <div class="papers-inner">
+            <div>
+              <h1 id="data-analysis">Data Analysis</h1>
+                <h2 id="coherent-waveburst">coherent WaveBurst</h2>
+                  <div class="papers-ul">
+                    <ul>
+                      <li class="paper-li">Methodology</li>
+                        <ul>
+                          <li class="paper-li"><strong>Klimenko et al. 2016</strong> (<a href="https://doi.org/10.48550/arXiv.1511.05999" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.93.042004" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), Method for detection and reconstruction of gravitational wave transients with networks of advanced detectors
+                          </li>
+                        </ul>
+                      <li class="paper-li">Observation</li>
+                    </ul>
+                  </div>
+                <h2 id="deep-learning">Deep Learning</h2>
+                  <div class="papers-ul">
+                    <ul>
+                      <li class="paper-li">Detection</li>
+                        <ul>
+                          <li class="paper-li"><strong>Astone et al. 2018</strong> (<a href="https://doi.org/10.48550/arXiv.1812.05363" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.98.122002" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), New method to observe gravitational waves emitted by core collapse supernovae
+                            <details>
+                                <summary>Summary</summary>
+                                <p>
+                                  They proposed a new method using 2D-CNN to detect GWs from CCSNe. The input of the model is a color image of a spectrogram whose R, G, and B channels correspond to the H1, L1, and V1 detectors. The model was trained using phenomenological waveforms with g-modes injected into Gaussian noise simulated using aLIGO and adVirgo design sensitivity curves. The test set was generated using the same procedure as the training set, and their method showed better efficiency than cWB for all SNRs and FARs examined.
+                                </p>
+                            </details>
+                          </li>
+                          <li class="paper-li"><strong>Iess et al. 2020</strong> (<a href="https://doi.org/10.48550/arXiv.2001.00279" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1088/2632-2153/ab7d31" target="_blank" rel="noopener noreferrer">Mach. learn.: sci. technol.</a>), Core-Collapse Supernova Gravitational-Wave Search and Deep Learning Classification
+                            <details>
+                              <summary>Summary</summary>
+                              <p>
+                                They performed detection and classification of GWs from CCSNe with a single detector. The training set includes 5 types of numerically simulated waveforms of CCSNe, sine-gaussian glitches, and scattered-light glitches. The noise are simulated Gaussian noise with Virgo(O3) and ET sensitivity curves. The detection method to distinguish signal and pure noise is based on Wavelet Detection Filter (WDF) and CNN; both 1D- and 2D-CNN were trained.
+    The 2D-CNN model showed 95% classification accuracy for the signals at an average distance of 0.6kpc which are not used for training, slightly higher than that of the 1D-CNN model. The ensemble model of 1D- and 2D-CNN was then used to classify different CCSN waveforms and achieved about 88% accuracy.
+                              </p>
+                            </details>
+                          </li>
+
+                          <li class="paper-li"><strong>Chan et al. 2020</strong> (<a href="https://doi.org/10.48550/arXiv.1912.13517" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.102.043022" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), Detection and Classification of Supernova Gravitational Waves Signals: A Deep Learning Approach
+                            <details>
+                              <summary>Summary</summary>
+                              <p>
+                                They performed detection of GWs from CCSNe using 1D-CNN with four-detector network. Their training and test set are numerically simulated magnetorotational and neutrino-driven CCSN waveforms injected in Gaussian noise.
+    When the FAP was 0.1%, the model achieved a TAP of 54% for magnetorotational signals from sources at 60 kpc using HLVK, and 77% using H+L+VK. For the neutrino-driven signals at 3 kpc, the TAP was 75% and 90% using HLVK and H+L+VK respectively. They then tested the model using signals not used for training, and concluded that CNN has potential as a tool for detection and classification of CCSN GW signals.
+                              </p>
+                            </details>
+                          </li>
+                          <li class="paper-li"><strong>López et al. 2021</strong> (<a href="https://doi.org/10.48550/arXiv.2011.13733" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.103.063011" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>, <a href="https://doi.org/10.1109/CBMI50038.2021.9461885" target="_blank" rel="noopener noreferrer">IEEE</a>), Deep learning for core-collapse supernova detection
+                            <details>
+                              <summary>Summary</summary>
+                              <p>
+                                They performed detection of GWs from CCSNe using Inception-ResNet model. 
+    Firstly, using the same training data as Aston et al., they confirmed that their new model showed better accuracy. They then generated more realistic phenomenological waveforms of g-modes by increasing the number of parameters, injected them into real noise of aLIGO and aVirgo obtained in O2, and trained the same model again. For the final testing, they used waveforms from 3D numerical simulation injected in real O2 noise. The result showed that for signals at 15 kpc, the efficiency was about 60% with the false-alarm rate 5%.
+                              </p>
+                            </details>
+                          </li>
+                        </ul>
+                      <li class="paper-li">Classification</li>
+                        <ul>
+                          <li class="paper-li"><strong>Edwards 2021</strong> (<a href="https://doi.org/10.48550/arXiv.2009.07367" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.103.024025" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), Classifying the equation of state from rotating core collapse gravitational waves with deep learning
+                            <details>
+                              <summary>Summary</summary>
+                              <p>
+                                He performed classification of EOS from rotating CCSN GWs using CNN. The training and test set are simulated waveforms by Richers et al, which have 18 different EOSs. No noise were added to the data. 
+  He trained 4 models: 1D-CNN using time-series, and 2D-CNN using spectrograms, periodograms, and time-series images. The 1D-CNN model achieved 72% top-1 accuracy and 97% top-5 accuracy, which were the highest of the four models. 
+                              </p>
+                            </details>
+                          </li>
+                        </ul>
+                    </ul>
+                  </div>
+                <h2 id="principal-component-analysis">Principal Component Analysis</h2>
+                  <div class="papers-ul">
+                    <ul>
+                      <li class="paper-li"><strong>Heng 2009</strong> (<a href="https://doi.org/10.48550/arXiv.0810.5707" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1088/0264-9381/26/10/105005" target="_blank" rel="noopener noreferrer">Class. Quantum Grav.</a>), Rotating stellar core-collapse waveform decompositon: a Principal Component Analysis approach</li>
+                      <li class="paper-li"><strong>Engels et al. 2014</strong> (<a href="https://doi.org/10.48550/arXiv.1406.1164" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.90.124026" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>, <a href="https://github.com/bwengals/ccsnmultivar" target="_blank" rel="noopener noreferrer">GitHub</a>), Multivariate regression analysis of gravitational waves from rotating core collapse</li>
+                      <li class="paper-li"><strong>Suvorova et al. 2019</strong> (<a href="https://doi.org/10.48550/arXiv.1901.02535" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.99.123012" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), Reconstructing Gravitational Wave Core-Collapse Supernova Signals with Dynamic Time Warping</li>
+                    </ul>
+                  </div>
+                <h2 id="other-methods">Other Methods</h2>
+                  <div class="papers-ul">
+                    <ul>
+                      <li class="paper-li">Genetic Programming</li>
+                        <ul>
+                          <li class="paper-li"><strong>Cavaglià et al. 2020</strong> (<a href="https://doi.org/10.48550/arXiv.2002.04591" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1088/2632-2153/ab527d" target="_blank" rel="noopener noreferrer">Mach. learn.: sci. technol.</a>), Improving the background of gravitational-wave searches for core collapse supernovae: a machine learning approach</li>
+                        </ul>
+                      <li class="paper-li">Hilbert-Huang Transfrom</li>
+                        <ul>
+                          <li class="paper-li"><strong>Takeda et al. 2021</strong> (<a href="https://doi.org/10.48550/arXiv.2107.05213" target="_blank" rel="noopener noreferrer">arXiv</a>, <a href="https://doi.org/10.1103/PhysRevD.104.084063" target="_blank" rel="noopener noreferrer">Phys. Rev. D</a>), Application of the Hilbert-Huang transform for analyzing standing-accretion-shock-instability induced gravitational waves in a core-collapse supernova</li>
+                        </ul>
+                    </ul>
+                  </div>
+                <h1 id="numerical-simulation">Numerical Simulation</h1>
+                <div class="papers-ul">
+                  <ul>
+                      <li class="paper-li"></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
